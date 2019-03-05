@@ -1,0 +1,77 @@
+@import "../../shared/theme/color-schemes/_default.scss";
+.check-label,
+.radio-label {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    >.form-control {
+        margin-bottom: 10px;
+    }
+    >.help-block {
+        margin-top: -10px;
+    }
+}
+
+.switch-group {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .control-label {
+        width: 100%;
+    }
+    switch {
+        flex: 1;
+    }
+}
+
+.col-md-100 {
+    width: 100%;
+}
+
+.search-group {
+    position: absolute;
+    top: 5%;
+    right: 20px;
+    transform: translate(0, -50%);
+    width: 340px;
+    background: $border-color;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+    overflow: hidden;
+    .search-input {
+        width: 300px;
+        height: 30px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $sidebar-fonts-color;
+        font-size: $sm-text;
+        text-indent: 1.5em;
+    }
+    .search-btn {
+        position: relative;
+        top: -1px;
+        right: 1px;
+        width: 30px;
+        height: 30px;
+        background: $primary;
+        border: 0;
+        border-radius: 50%;
+        outline: none;
+        line-height: 30px;
+        text-align: center;
+        color: $body-bg;
+        transform: scale(0);
+        transition: all .4s;
+        &:hover {
+            background: lighten($primary, 10%);
+            transform: scale(1);
+        }
+    }
+    .search-input:focus+.search-btn {
+        transform: scale(1);
+    }
+}
